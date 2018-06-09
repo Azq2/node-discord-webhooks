@@ -1,0 +1,73 @@
+{
+	// API base url
+	"api":			"https://discordapp.com/api", 
+	
+	// dump events content
+	"verbose":		false, 
+	
+	// Dir for save sessions, if not specified - using OS tmp dir
+	// "stateDir":	"./state", 
+	
+	"bots": [
+		// First bot
+		{
+			// bot name for logs
+			"name":			"liza", 
+			
+			// bot token or oauth2 access token
+			"token":		"MTk4NjIyNDgzNDcxOTI1MjQ4.Cl2FMQ.ZnCjm1XVW7vRze4b7Cq4se7kKWs", 
+			
+			// token type, bearer or bot
+			"tokenType":	"bot", 
+			
+			// webhook receivers
+			"webhooks":		{
+				// Call on dispatch events
+				// See events at: https://discordapp.com/developers/docs/topics/gateway#event-names
+				"events":	{
+					"url":		"https://example.com/callback.php?type=events", 
+					
+					// Events whitelist, example:
+					// "include": ["MESSAGE_CREATE"], 
+					"include":	[], 
+					
+					// Events blacklist, example:
+					// "exclude": ["READE"], 
+					"exclude":	[]
+				}, 
+				
+				// Call on websocket connected and identify done (Optional)
+				"connected": {
+					"url":		"https://example.com/callback.php?type=connected"
+				}, 
+				
+				// Call on websocket disconnected (Optional)
+				"disconnected": {
+					"url":		"https://example.com/callback.php?type=disconnected"
+				}
+			}
+		}, 
+		
+		// Second bot
+		{
+			// bot name for logs
+			"name":			"alice", 
+			
+			// bot token or oauth2 access token
+			"token":		"CZhtkLDpNYXgPH9Ml6shqh2OwykChw", 
+			
+			// token type, bearer or bot
+			"tokenType":	"bearer", 
+			
+			// webhook receivers
+			"webhooks":		{
+				// Call on dispatch events
+				// See events at: https://discordapp.com/developers/docs/topics/gateway#event-names
+				"events":	{
+					"url":		"https://example.com/callback.php?type=events"
+				}
+			}
+		}
+		// Other bots... unlimited
+	]
+}
