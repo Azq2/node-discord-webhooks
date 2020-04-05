@@ -12,7 +12,7 @@
   "dependencies": {
     "dateformat": "^3.0.3",
     "http": "0.0.0",
-    "minimist": "^1.2.0",
+    "minimist": "^1.2.5",
     "node-fetch": "^2.1.2",
     "promisify": "0.0.3",
     "strip-json-comments": "^2.0.1",
