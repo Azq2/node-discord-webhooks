@@ -13,7 +13,7 @@
     "dateformat": "^3.0.3",
     "http": "0.0.0",
     "minimist": "^1.2.6",
-    "node-fetch": "^2.6.1",
+    "node-fetch": ">=2.6.7",
     "promisify": "0.0.3",
     "strip-json-comments": "^2.0.1",
     "ws": "^7.4.6"
